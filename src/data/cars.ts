@@ -11,45 +11,207 @@ export interface Car {
   engine: string;
 }
 
-const IMG1 = "https://cdn.poehali.dev/projects/7509e7c4-cce0-433e-a98b-c4c0c43a273b/files/6e5107c5-9106-4431-826c-0e993106483b.jpg";
-const IMG2 = "https://cdn.poehali.dev/projects/7509e7c4-cce0-433e-a98b-c4c0c43a273b/files/bf5b75b7-d98e-458a-bda6-76cd00e4dfe1.jpg";
-const IMG3 = "https://cdn.poehali.dev/projects/7509e7c4-cce0-433e-a98b-c4c0c43a273b/files/245ea068-09be-4f45-86c5-3023b830f12a.jpg";
+// Фото с сайта servis-prokat.ru (прямые ссылки из sitemap)
+const SOLARIS = "https://servis-prokat.ru/wp-content/uploads/2022/02/hendaj-solyaris-2018-1.jpeg";
+const LOGAN = "https://servis-prokat.ru/wp-content/uploads/2022/02/f9723dc8-fb35-8150-8915-e0b6b39036c7_810_350_775_420_2_.jpeg";
+const GEELY_ATLAS = "https://servis-prokat.ru/wp-content/uploads/2023/11/ac_7e289fb8c1cf0b57866bd05caa86cb5f_1650668677.webp";
+const UAZ = "https://servis-prokat.ru/wp-content/uploads/2022/02/540773be-54e4-6565-8d7c-cefd90c56677_furg775_420_775_420_2_.jpeg";
+const SAMOKAT = "https://servis-prokat.ru/wp-content/uploads/2024/06/e2b6469e-b5d4-4cfe-b184-860724f7865d.webp";
 
-const placeholderImages = [IMG1, IMG2, IMG3];
+// Открытые фото через Wikipedia CDN
+const POLO = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/VW_Polo_VI_IMG_0046.jpg/1280px-VW_Polo_VI_IMG_0046.jpg";
+const KIA_RIO = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/2017_Kia_Rio_GT-Line_1.4_Front.jpg/1280px-2017_Kia_Rio_GT-Line_1.4_Front.jpg";
+const FORD_FOCUS = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Ford_Focus_III_Estate_%28facelift%2C_blue%29%2C_front_8.17.17.jpg/1280px-Ford_Focus_III_Estate_%28facelift%2C_blue%29%2C_front_8.17.17.jpg";
+const OCTAVIA = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Skoda_Octavia_III_facelift_%2820170326%29_2.jpg/1280px-Skoda_Octavia_III_facelift_%2820170326%29_2.jpg";
+const KIA_OPTIMA = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/2016_Kia_Optima_%28JF%29_Si_sedan_%282018-10-09%29_01.jpg/1280px-2016_Kia_Optima_%28JF%29_Si_sedan_%282018-10-09%29_01.jpg";
+const GEELY_COOL = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Geely_Coolray_IAA_2019_IMG_0469.jpg/1280px-Geely_Coolray_IAA_2019_IMG_0469.jpg";
+const LARGUS = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/2015_Lada_Largus_%28F90%29_Cross_wagon_%282018-10-20%29_01.jpg/1280px-2015_Lada_Largus_%28F90%29_Cross_wagon_%282018-10-20%29_01.jpg";
+const GAC_M8 = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/GAC_Trumpchi_GM8_at_Shanghai_2019.jpg/1280px-GAC_Trumpchi_GM8_at_Shanghai_2019.jpg";
+const JUMPER = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Citroen_Jumper_front_20100509.jpg/1280px-Citroen_Jumper_front_20100509.jpg";
 
 export const cars: Car[] = [
-  { id: 1, name: "Mercedes-Benz S-Class", category: "Премиум", price: 15000, image: IMG1, year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 5, engine: "3.0L V6" },
-  { id: 2, name: "BMW X5", category: "Внедорожник", price: 12000, image: IMG2, year: 2024, transmission: "Автомат", fuel: "Дизель", seats: 5, engine: "3.0L I6" },
-  { id: 3, name: "Porsche 911", category: "Спорт", price: 25000, image: IMG3, year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 2, engine: "3.0L H6" },
-  { id: 4, name: "Audi A8", category: "Премиум", price: 14000, image: placeholderImages[0], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 5, engine: "3.0L V6" },
-  { id: 5, name: "BMW 7 Series", category: "Премиум", price: 14500, image: placeholderImages[1], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 5, engine: "3.0L I6" },
-  { id: 6, name: "Range Rover", category: "Внедорожник", price: 18000, image: placeholderImages[2], year: 2024, transmission: "Автомат", fuel: "Дизель", seats: 5, engine: "3.0L V6" },
-  { id: 7, name: "Mercedes-Benz G-Class", category: "Внедорожник", price: 22000, image: placeholderImages[0], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 5, engine: "4.0L V8" },
-  { id: 8, name: "Lamborghini Huracán", category: "Спорт", price: 45000, image: placeholderImages[2], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 2, engine: "5.2L V10" },
-  { id: 9, name: "Toyota Camry", category: "Бизнес", price: 5000, image: placeholderImages[1], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 5, engine: "2.5L I4" },
-  { id: 10, name: "Kia K5", category: "Бизнес", price: 4500, image: placeholderImages[0], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 5, engine: "2.5L I4" },
-  { id: 11, name: "Genesis G80", category: "Премиум", price: 10000, image: placeholderImages[1], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 5, engine: "2.5L I4T" },
-  { id: 12, name: "Volkswagen Touareg", category: "Внедорожник", price: 9000, image: placeholderImages[2], year: 2024, transmission: "Автомат", fuel: "Дизель", seats: 5, engine: "3.0L V6" },
-  { id: 13, name: "Audi Q7", category: "Внедорожник", price: 11000, image: placeholderImages[0], year: 2024, transmission: "Автомат", fuel: "Дизель", seats: 7, engine: "3.0L V6" },
-  { id: 14, name: "BMW M4", category: "Спорт", price: 18000, image: placeholderImages[1], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 4, engine: "3.0L I6T" },
-  { id: 15, name: "Mercedes-AMG GT", category: "Спорт", price: 30000, image: placeholderImages[2], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 2, engine: "4.0L V8" },
-  { id: 16, name: "Lexus LX", category: "Внедорожник", price: 13000, image: placeholderImages[0], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 7, engine: "3.5L V6T" },
-  { id: 17, name: "Cadillac Escalade", category: "Внедорожник", price: 16000, image: placeholderImages[1], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 7, engine: "6.2L V8" },
-  { id: 18, name: "Ferrari Roma", category: "Спорт", price: 50000, image: placeholderImages[2], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 2, engine: "3.9L V8T" },
-  { id: 19, name: "Bentley Continental GT", category: "Премиум", price: 40000, image: placeholderImages[0], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 4, engine: "6.0L W12" },
-  { id: 20, name: "Rolls-Royce Ghost", category: "Премиум", price: 55000, image: placeholderImages[1], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 5, engine: "6.75L V12" },
-  { id: 21, name: "Hyundai Sonata", category: "Бизнес", price: 4000, image: placeholderImages[2], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 5, engine: "2.5L I4" },
-  { id: 22, name: "Mazda CX-9", category: "Внедорожник", price: 6500, image: placeholderImages[0], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 7, engine: "2.5L I4T" },
-  { id: 23, name: "Audi RS6", category: "Спорт", price: 22000, image: placeholderImages[1], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 5, engine: "4.0L V8T" },
-  { id: 24, name: "Mercedes-Benz E-Class", category: "Бизнес", price: 8000, image: placeholderImages[2], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 5, engine: "2.0L I4T" },
-  { id: 25, name: "BMW X7", category: "Внедорожник", price: 15000, image: placeholderImages[0], year: 2024, transmission: "Автомат", fuel: "Дизель", seats: 7, engine: "3.0L I6" },
-  { id: 26, name: "Porsche Cayenne", category: "Внедорожник", price: 17000, image: placeholderImages[1], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 5, engine: "3.0L V6T" },
-  { id: 27, name: "Maserati Ghibli", category: "Премиум", price: 20000, image: placeholderImages[2], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 5, engine: "3.0L V6T" },
-  { id: 28, name: "Genesis GV80", category: "Внедорожник", price: 9500, image: placeholderImages[0], year: 2024, transmission: "Автомат", fuel: "Дизель", seats: 5, engine: "3.0L I6" },
-  { id: 29, name: "Lexus LS", category: "Премиум", price: 13000, image: placeholderImages[1], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 5, engine: "3.5L V6T" },
-  { id: 30, name: "Jaguar F-Type", category: "Спорт", price: 19000, image: placeholderImages[2], year: 2024, transmission: "Автомат", fuel: "Бензин", seats: 2, engine: "5.0L V8" },
+  {
+    id: 1,
+    name: "Hyundai Solaris 2018",
+    category: "Эконом",
+    price: 2500,
+    image: SOLARIS,
+    year: 2018,
+    transmission: "Автомат",
+    fuel: "Бензин",
+    seats: 5,
+    engine: "1.6 л / 123 л.с.",
+  },
+  {
+    id: 2,
+    name: "Renault Logan АКПП",
+    category: "Эконом",
+    price: 2200,
+    image: LOGAN,
+    year: 2020,
+    transmission: "Автомат",
+    fuel: "Бензин",
+    seats: 5,
+    engine: "1.6 л / 82 л.с.",
+  },
+  {
+    id: 3,
+    name: "Volkswagen Polo МКПП",
+    category: "Эконом",
+    price: 2000,
+    image: POLO,
+    year: 2015,
+    transmission: "Механика",
+    fuel: "Бензин",
+    seats: 5,
+    engine: "1.6 л / 86 л.с.",
+  },
+  {
+    id: 4,
+    name: "Kia Rio X-Line",
+    category: "Эконом",
+    price: 2500,
+    image: KIA_RIO,
+    year: 2021,
+    transmission: "Автомат",
+    fuel: "Бензин",
+    seats: 5,
+    engine: "1.6 л / 123 л.с.",
+  },
+  {
+    id: 5,
+    name: "Ford Focus МКПП",
+    category: "Эконом",
+    price: 2300,
+    image: FORD_FOCUS,
+    year: 2018,
+    transmission: "Механика",
+    fuel: "Бензин",
+    seats: 5,
+    engine: "1.6 л / 100 л.с.",
+  },
+  {
+    id: 6,
+    name: "Skoda Octavia АКПП",
+    category: "Комфорт",
+    price: 3200,
+    image: OCTAVIA,
+    year: 2019,
+    transmission: "Автомат",
+    fuel: "Бензин",
+    seats: 5,
+    engine: "1.8 л / 152 л.с.",
+  },
+  {
+    id: 7,
+    name: "Skoda Octavia A7",
+    category: "Комфорт",
+    price: 3500,
+    image: OCTAVIA,
+    year: 2020,
+    transmission: "Автомат",
+    fuel: "Бензин",
+    seats: 5,
+    engine: "1.8 л / 180 л.с.",
+  },
+  {
+    id: 8,
+    name: "Kia Optima",
+    category: "Бизнес",
+    price: 3800,
+    image: KIA_OPTIMA,
+    year: 2020,
+    transmission: "Автомат",
+    fuel: "Бензин",
+    seats: 5,
+    engine: "2.0 л / 150 л.с.",
+  },
+  {
+    id: 9,
+    name: "Geely Atlas PRO",
+    category: "Внедорожник",
+    price: 4500,
+    image: GEELY_ATLAS,
+    year: 2023,
+    transmission: "Автомат",
+    fuel: "Бензин",
+    seats: 5,
+    engine: "2.0 л / 177 л.с.",
+  },
+  {
+    id: 10,
+    name: "Geely CoolRay SPORT",
+    category: "Внедорожник",
+    price: 4200,
+    image: GEELY_COOL,
+    year: 2024,
+    transmission: "Автомат",
+    fuel: "Бензин",
+    seats: 5,
+    engine: "1.5 л / 150 л.с.",
+  },
+  {
+    id: 11,
+    name: "UAZ Patriot МКПП",
+    category: "Внедорожник",
+    price: 3500,
+    image: UAZ,
+    year: 2021,
+    transmission: "Механика",
+    fuel: "Бензин",
+    seats: 5,
+    engine: "2.7 л / 128 л.с.",
+  },
+  {
+    id: 12,
+    name: "Lada Largus 7 мест",
+    category: "Минивэн",
+    price: 3000,
+    image: LARGUS,
+    year: 2021,
+    transmission: "Механика",
+    fuel: "Бензин",
+    seats: 7,
+    engine: "1.6 л / 105 л.с.",
+  },
+  {
+    id: 13,
+    name: "GAC M8",
+    category: "Минивэн",
+    price: 6000,
+    image: GAC_M8,
+    year: 2024,
+    transmission: "Автомат",
+    fuel: "Бензин",
+    seats: 7,
+    engine: "2.0 л / 252 л.с.",
+  },
+  {
+    id: 14,
+    name: "Citroen Jumper Фургон",
+    category: "Грузовой",
+    price: 4000,
+    image: JUMPER,
+    year: 2019,
+    transmission: "Механика",
+    fuel: "Дизель",
+    seats: 3,
+    engine: "2.2 л / 120 л.с.",
+  },
+  {
+    id: 15,
+    name: "Электросамокат Ninebot E2 Pro",
+    category: "Мото",
+    price: 800,
+    image: SAMOKAT,
+    year: 2024,
+    transmission: "—",
+    fuel: "Электро",
+    seats: 1,
+    engine: "350 Вт",
+  },
 ];
 
-export const categories = ["Все", "Премиум", "Внедорожник", "Спорт", "Бизнес"];
+export const categories = ["Все", "Эконом", "Комфорт", "Бизнес", "Внедорожник", "Минивэн", "Грузовой", "Мото"];
 
 export default cars;
